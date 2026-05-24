@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-<title>Starlink to Mobile — by Airtel Zambia</title>
+<title>Starlink to Mobile — by MTN Zambia</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -22,11 +22,16 @@ font-family:"Plus Jakarta Sans",system-ui;
 }
 
 :root{
---primary:#e60000;
---primary-dark:#b80000;
---primary-soft:#ffe5e5;
+--primary:#ffcb00;
+--primary-dark:#e6b800;
+--primary-soft:rgba(255,203,0,0.12);
 --accent:#ffffff;
---bg:#fff5f5;
+--bg:#0f0f0f;
+--surface:#1a1a1a;
+--surface2:#222222;
+--text:#f0f0f0;
+--text-muted:#888;
+--border:rgba(255,203,0,0.12);
 }
 
 /* page background */
@@ -34,7 +39,7 @@ font-family:"Plus Jakarta Sans",system-ui;
 body{
 
 background:
-linear-gradient(180deg,#fff5f5,#ffdede);
+linear-gradient(180deg,#111,#0a0a0a);
 
 min-height:100vh;
 
@@ -45,6 +50,8 @@ justify-content:center;
 padding:20px;
 
 overflow-x:hidden;
+
+color:var(--text);
 
 }
 
@@ -58,10 +65,10 @@ border-radius:50%;
 
 background:
 radial-gradient(circle,
-rgba(230,0,0,0.16),
+rgba(255,203,0,0.10),
 transparent 70%);
 
-filter:blur(50px);
+filter:blur(60px);
 
 animation:float 18s infinite linear;
 
@@ -103,17 +110,18 @@ animation-duration:22s;
 width:100%;
 max-width:1050px;
 
-background:white;
+background:var(--surface);
 
 border-radius:24px;
 
 padding:26px;
 
-border:1px solid rgba(230,0,0,0.08);
+border:1px solid var(--border);
 
 box-shadow:
-0 30px 70px rgba(230,0,0,0.10),
-inset 0 1px 0 rgba(255,255,255,0.8);
+0 30px 70px rgba(0,0,0,0.5),
+0 0 0 1px rgba(255,203,0,0.05),
+inset 0 1px 0 rgba(255,255,255,0.04);
 
 backdrop-filter:blur(10px);
 
@@ -141,7 +149,7 @@ font-weight:800;
 background:linear-gradient(
 90deg,
 var(--primary),
-#ff4d4d
+#ffe566
 );
 
 -webkit-background-clip:text;
@@ -151,7 +159,7 @@ var(--primary),
 .title-block p{
 margin:5px 0 0;
 font-size:13px;
-color:#555;
+color:var(--text-muted);
 }
 
 /* powered by */
@@ -164,6 +172,8 @@ gap:10px;
 
 font-size:13px;
 font-weight:600;
+
+color:var(--text-muted);
 
 }
 
@@ -194,9 +204,9 @@ padding:18px;
 
 cursor:pointer;
 
-background:white;
+background:var(--surface2);
 
-border:1px solid rgba(230,0,0,0.08);
+border:1px solid var(--border);
 
 transition:.25s;
 
@@ -220,7 +230,7 @@ height:160px;
 
 background:
 radial-gradient(circle,
-rgba(255,255,255,0.35),
+rgba(255,203,0,0.08),
 transparent 70%);
 
 filter:blur(20px);
@@ -241,7 +251,7 @@ height:160px;
 
 background:
 radial-gradient(circle,
-rgba(230,0,0,0.18),
+rgba(255,203,0,0.10),
 transparent 70%);
 
 filter:blur(18px);
@@ -255,9 +265,12 @@ filter:blur(18px);
 transform:translateY(-6px) scale(1.03);
 
 box-shadow:
-0 20px 40px rgba(230,0,0,0.20);
+0 20px 40px rgba(255,203,0,0.12),
+0 0 0 1px rgba(255,203,0,0.3);
 
 border-color:var(--primary);
+
+background:#272200;
 
 }
 
@@ -282,11 +295,11 @@ margin-bottom:8px;
 
 font-size:11px;
 
-background:rgba(230,0,0,0.08);
+background:rgba(255,203,0,0.10);
 
 color:var(--primary);
 
-border:1px solid rgba(230,0,0,0.25);
+border:1px solid rgba(255,203,0,0.25);
 
 padding:4px 8px;
 
@@ -305,12 +318,14 @@ font-weight:700;
 font-weight:800;
 font-size:17px;
 
+color:var(--text);
+
 }
 
 .plan-duration{
 
 font-size:12px;
-color:#666;
+color:var(--text-muted);
 
 margin-bottom:6px;
 
@@ -334,6 +349,8 @@ font-size:12px;
 font-weight:700;
 color:var(--primary);
 
+opacity:.8;
+
 }
 
 /* modal */
@@ -343,7 +360,7 @@ color:var(--primary);
 position:fixed;
 inset:0;
 
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.65);
 
 display:none;
 
@@ -356,7 +373,7 @@ padding:20px;
 
 .modal-box{
 
-background:white;
+background:var(--surface);
 
 padding:22px;
 
@@ -365,8 +382,13 @@ border-radius:18px;
 width:100%;
 max-width:420px;
 
+border:1px solid var(--border);
+
 box-shadow:
-0 30px 60px rgba(0,0,0,0.25);
+0 30px 60px rgba(0,0,0,0.6),
+0 0 0 1px rgba(255,203,0,0.08);
+
+color:var(--text);
 
 }
 
@@ -375,17 +397,32 @@ box-shadow:
 font-weight:800;
 margin-bottom:6px;
 
+color:var(--text);
+
+}
+
+.modal-box p{
+color:var(--text-muted);
+font-size:14px;
 }
 
 .modal-details{
 
-background:#fafafa;
+background:var(--surface2);
 
 padding:12px;
 
 border-radius:12px;
 
 margin-bottom:12px;
+
+border:1px solid var(--border);
+
+color:var(--text-muted);
+
+font-size:14px;
+
+line-height:1.8;
 
 }
 
@@ -409,6 +446,8 @@ cursor:pointer;
 
 font-weight:700;
 
+font-family:"Plus Jakarta Sans",system-ui;
+
 }
 
 .btn-primary{
@@ -416,10 +455,10 @@ font-weight:700;
 background:linear-gradient(
 135deg,
 var(--primary),
-#ff3333
+#ffe14d
 );
 
-color:white;
+color:#111;
 
 }
 
@@ -431,7 +470,17 @@ background:var(--primary-dark);
 
 .btn-ghost{
 
-background:#eee;
+background:rgba(255,255,255,0.07);
+
+color:var(--text);
+
+border:1px solid rgba(255,255,255,0.1);
+
+}
+
+.btn-ghost:hover{
+
+background:rgba(255,255,255,0.12);
 
 }
 
@@ -441,7 +490,7 @@ margin-top:14px;
 
 font-size:12px;
 
-color:#555;
+color:var(--text-muted);
 
 }
 
@@ -485,7 +534,7 @@ grid-template-columns:1fr;
 
 <h1>Starlink to Mobile</h1>
 
-<p>Fast data powered by Airtel Zambia</p>
+<p>Fast data powered by MTN Zambia</p>
 
 </div>
 
@@ -493,7 +542,7 @@ grid-template-columns:1fr;
 
 <span>Powered by</span>
 
-<img src="assets/wine.svg">
+<img src="assets/mtn.svg">
 
 </div>
 
@@ -552,7 +601,7 @@ grid-template-columns:1fr;
 </div>
 
 <div class="note">
-Selecting a plan redirects to secure Airtel Money login.<br>
+Selecting a plan redirects to secure MTN MoMo login.<br>
 Plan activates once your line is registered.
 </div>
 
@@ -572,7 +621,7 @@ Plan activates once your line is registered.
 
 <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
 
-<button class="btn btn-primary" onclick="goLogin()">Pay with Airtel Money</button>
+<button class="btn btn-primary" onclick="goLogin()">Pay with MTN MoMo</button>
 
 </div>
 

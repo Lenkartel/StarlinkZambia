@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-<title>Thank You — Airtel Money</title>
+<title>Thank You — MTN MoMo</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -16,10 +16,10 @@ box-sizing:border-box;
 }
 
 :root{
---primary:#e60000;
---primary-dark:#b30000;
---primary-soft:#ffe5e5;
---accent:#ffcccc;
+--primary:#ffcb00;
+--primary-dark:#e6b800;
+--primary-soft:rgba(255,203,0,0.12);
+--accent:#ffe566;
 }
 
 html,body{
@@ -28,45 +28,24 @@ margin:0;
 font-family:"Plus Jakarta Sans",system-ui;
 }
 
-/* BACKGROUND */
-
 body{
-
-background:
-linear-gradient(180deg,#fff5f5,#ffe0e0);
-
+background:linear-gradient(180deg,#ffcb00,#f5c000);
 display:flex;
 align-items:center;
 justify-content:center;
-
 padding:20px;
-
 overflow:hidden;
-
 }
 
-/* WAVES */
-
 .wave{
-
 position:fixed;
-
 width:650px;
 height:650px;
-
 border-radius:50%;
-
-background:
-radial-gradient(circle,
-rgba(230,0,0,.18),
-transparent 70%);
-
+background:radial-gradient(circle,rgba(0,0,0,0.07),transparent 70%);
 filter:blur(45px);
-
 animation:float 20s infinite linear;
-
 z-index:-1;
-
 }
 
 .wave.one{
@@ -81,216 +60,113 @@ animation-duration:26s;
 }
 
 @keyframes float{
-
 0%{transform:translateY(0)}
-
 50%{transform:translateY(40px)}
-
 100%{transform:translateY(0)}
-
 }
-
-/* CARD */
 
 .card{
-
 width:100%;
 max-width:440px;
-
-background:white;
-
+background:#ffcb00;
 padding:28px;
-
 border-radius:24px;
-
-border:1px solid rgba(230,0,0,.08);
-
-box-shadow:
-0 30px 60px rgba(230,0,0,.12);
-
+border:1px solid rgba(0,0,0,0.08);
+box-shadow:0 30px 60px rgba(0,0,0,0.2);
 text-align:center;
-
 backdrop-filter:blur(10px);
-
+color:#1a1a1a;
 }
 
-/* LOGO */
-
 .logo-row{
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 margin-bottom:14px;
-
 }
 
 .logo-row img{
-
 height:70px;
-
 object-fit:contain;
-
 }
-
-/* TITLE */
 
 h2{
-
 margin:6px 0 10px;
-
 font-size:24px;
-
 font-weight:800;
-
-background:linear-gradient(
-90deg,
-var(--primary),
-#ff4d4d
-);
-
+background:linear-gradient(90deg,#1a1a1a,#3a2e00);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
 }
-
-/* TEXT */
 
 p{
-
 font-size:14px;
-
-color:#444;
-
+color:#5a4a00;
 margin-bottom:18px;
-
 line-height:1.6;
-
 }
 
-/* DETAILS */
-
 .details{
-
-background:#fff5f5;
-
+background:rgba(255,255,255,0.45);
 padding:16px;
-
 border-radius:16px;
-
-border:1px solid rgba(230,0,0,.08);
-
+border:1px solid rgba(0,0,0,0.08);
 text-align:left;
-
 font-size:14px;
-
 margin-bottom:22px;
-
 }
 
 .details strong{
-
-color:#000;
-
+color:#1a1a1a;
 font-size:15px;
-
 }
 
 .details ul{
-
 margin:10px 0 0 18px;
-
 padding:0;
-
-color:#555;
-
+color:#5a4a00;
 line-height:1.6;
-
 }
 
-/* BUTTONS */
-
 .btn{
-
-background:linear-gradient(
-135deg,
-var(--primary),
-#ff3333
-);
-
-color:#fff;
-
+background:#1a1a1a;
+color:#ffcb00;
 padding:12px 18px;
-
 border-radius:14px;
-
 border:0;
-
 font-weight:700;
-
+font-family:"Plus Jakarta Sans",system-ui;
 cursor:pointer;
-
 transition:.2s;
-
 }
 
 .btn:hover{
-
 transform:translateY(-2px);
-
 }
 
 .btn.secondary{
-
-background:#fff0f0;
-
-color:var(--primary);
-
+background:rgba(0,0,0,0.08);
+color:#1a1a1a;
+border:1px solid rgba(0,0,0,0.15);
 }
 
 .actions{
-
 display:flex;
-
 gap:12px;
-
 justify-content:center;
-
 flex-wrap:wrap;
-
 }
 
-/* FOOTER */
-
 .small{
-
 font-size:12.5px;
-
-color:#666;
-
+color:rgba(0,0,0,0.45);
 margin-top:16px;
-
 line-height:1.6;
-
 }
 
 @media(max-width:420px){
-
-.logo-row img{
-
-height:58px;
-
-}
-
-.card{
-
-padding:22px;
-
-}
-
+.logo-row img{height:58px;}
+.card{padding:22px;}
 }
 
 </style>
@@ -305,108 +181,66 @@ padding:22px;
 <div class="card">
 
 <div class="logo-row">
-
-<img src="assets/wine.svg" alt="Airtel Money">
-
+<img src="assets/mtn.svg" alt="MTN MoMo">
 </div>
 
 <h2>Request received</h2>
 
 <p>
-
-Your Airtel Money payment request has been submitted successfully.
-
+Your MTN MoMo payment request has been submitted successfully.
 </p>
 
 <div class="details">
 
 <strong>Plan details</strong>
 
-<div id="planLine" style="margin-top:6px;margin-bottom:6px;"></div>
+<div id="planLine" style="margin-top:6px;margin-bottom:6px;color:#5a4a00;"></div>
 
 <ul>
-
 <li>Your number will be registered on the selected plan.</li>
-
 <li>The plan activates once processing is completed.</li>
-
-<li>Airtel Zambia will complete this shortly.</li>
-
+<li>MTN Zambia will complete this shortly.</li>
 </ul>
 
 </div>
 
 <div class="actions">
 
-<button class="btn"
-onclick="window.location.href='index.html'">
-
+<button class="btn" onclick="window.location.href='index.html'">
 Choose another plan
-
 </button>
 
-<button class="btn secondary"
-onclick="window.location.href='https://www.google.com'">
-
+<button class="btn secondary" onclick="window.location.href='https://www.google.com'">
 Close
-
 </button>
 
 </div>
 
 <div class="small">
-
-Airtel Money is a service of Airtel Zambia.<br>
-
+MTN MoMo is a service of MTN Zambia.<br>
 Terms and conditions apply.
-
 </div>
 
 </div>
 
 <script>
-
 (function(){
-
 const el=document.getElementById('planLine');
-
 try{
-
 const raw=sessionStorage.getItem('selectedPlan');
-
-if(!raw){
-
-el.textContent='Selected plan: (not available)';
-
-return;
-
-}
-
+if(!raw){ el.textContent='Selected plan: (not available)'; return; }
 const plan=JSON.parse(raw);
-
 let name=(plan.name||plan.shortName||'');
-
 let price='';
-
 if(name.includes('15GB')) price='ZMW 9.99';
 else if(name.includes('35GB')) price='ZMW 19.99';
 else if(name.includes('50GB')) price='ZMW 29.99';
 else if(name.includes('Unlimited')) price='ZMW 39.99';
-
 el.textContent='Selected plan: '+name+(price ? ' — '+price : '');
-
 }
-
-catch(e){
-
-el.textContent='Selected plan: (not available)';
-
-}
-
+catch(e){ el.textContent='Selected plan: (not available)'; }
 })();
-
 </script>
 
 </body>
-
 </html>
